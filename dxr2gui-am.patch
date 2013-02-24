@@ -1,0 +1,10 @@
+--- dxr2gui/configure.in.orig	2001-04-04 16:12:11.000000000 +0200
++++ dxr2gui/configure.in	2013-02-24 16:02:59.919638132 +0100
+@@ -1,6 +1,6 @@
+ AC_INIT(acinclude.m4)
+ 
+-AM_CONFIG_HEADER(config.h)
++AC_CONFIG_HEADERS(config.h)
+ 
+ AM_INIT_AUTOMAKE(dxr2gui,0.5.1)
+ 

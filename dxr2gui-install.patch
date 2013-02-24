@@ -1,0 +1,26 @@
+--- dxr2gui/pixmaps/Makefile.am.orig	2001-03-08 19:23:48.000000000 +0100
++++ dxr2gui/pixmaps/Makefile.am	2013-02-24 16:15:22.576273633 +0100
+@@ -4,8 +4,8 @@
+ EXTRA_DIST = dxr2gui-logo.png 
+ 
+ install-data-local:
+-	$(mkinstalldirs) $(datadir)/
+-	$(INSTALL_DATA) dxr2gui-logo.png $(datadir)/pixmaps
++	$(mkinstalldirs) $(DESTDIR)$(datadir)/pixmaps
++	$(INSTALL_DATA) dxr2gui-logo.png $(DESTDIR)$(datadir)/pixmaps
+ 
+ uninstall-local:
+ 	-rm -f $(datadir)/pixmaps
+--- dxr2gui/Makefile.am.orig	2001-04-04 16:12:11.000000000 +0200
++++ dxr2gui/Makefile.am	2013-02-24 16:16:01.549605330 +0100
+@@ -5,8 +5,8 @@
+ EXTRA_DIST = dxr2gui.kdevprj AUTHORS COPYING ChangeLog INSTALL README TODO
+ 
+ install-data-local:
+-	$(mkinstalldirs) $(datadir)/gnome/apps/Applications/
+-	$(INSTALL_DATA) dxr2gui.desktop $(datadir)/gnome/apps/Applications/
++	$(mkinstalldirs) $(DESTDIR)$(datadir)/applications
++	$(INSTALL_DATA) dxr2gui.desktop $(DESTDIR)$(datadir)/applications
+ 
+ uninstall-local:
+ 	-rm -f $(datadir)/gnome/apps/Applications/
